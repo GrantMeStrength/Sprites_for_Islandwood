@@ -6,6 +6,8 @@
 
 Who doesn’t like a good, old-fashioned 2D arcade game? Games have always been one of the best ways to get into programming, and also one of the best ways for trying out new platforms and technologies. Case in point: in this tutorial, we’ll look at how a sprite-based game written for iOS can be converted to become a Windows UWP app. 
 
+![Image of Game](sprites.png)
+
 Sprites are simply shapes that can be quickly drawn on the screen. They’re ideal for drawing spaceships, aliens, laser blasts, plumbers, gorillas – you name it. If you ever developed Windows games using the XNA library, you’ll know all about them.
 
 iOS comes with the UISpriteKit framework, but as the iOS Bridge doesn’t currently support that, we’ll use GLKit to write our own basic sprite routine. This sprite class will be as simple as it can get, but it will be a good starting point for your own code, and will let you create all manner of 2D games. 
