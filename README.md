@@ -1,6 +1,6 @@
-# Sprites_for_Islandwood
+## Sprites for Islandwood
 
-Using the Windows Bridge for iOS to write a sprite-based game for Windows 10
+#Using the [Windows Bridge for IOS](https://github.com/Microsoft/WinObjC/releases) to write a sprite-based game for Windows 10
 
 **Introduction**
 
@@ -70,20 +70,20 @@ Here’s the method that does the rendering of the sprite: it essentially uses t
 
 
 
-Six different sprite types are defined:
+Seven different sprite types are defined:
 
-The player’s ship
-The bad guy aliens
-Laser blasts
-Stars for the parallax starfield
-Background texture
-Explosions 
-Blocks for the scrolling landscape
+1. The player’s ship
+2. The bad guy aliens
+3. Laser blasts
+4. Stars for the parallax starfield
+5. Background texture
+6. Explosions 
+7. Blocks for the scrolling landscape
 
 
 All of them are based on SpriteClass. To make the bad guy aliens look a little more cool, two sprites are drawn for every bad guy, one with pulsating height and the other with pulsating width. This makes them almost look like they are spinning. Similarly, the explosion is created by zooming an image of an explosion over a few frames before it vanishes.
 
-And as for collision detection? Sorry, there is nothing subtle going on here. There is no pixel-by-pixel tests going on, only a check for overlapping rectangles. 
+And as for collision detection? Sorry, there is nothing subtle going on here. There is no pixel-by-pixel tests happening, only a check for overlapping rectangles. 
 
 To keep things simple, we’re going to support swipe and tap events to move the player’s ship, and trigger firing a laser.
 
@@ -91,10 +91,11 @@ To keep things simple, we’re going to support swipe and tap events to move the
 **Using the iOS Bridge**
 
 Now we get to the stage where we can convert the Xcode app to a Visual Studio solution.
-Make sure you have the latest Windows Bridge for iOS tools installed on your (real or virtual PC). Copy the correct bits from the github location here. Remember: click on the Release link, do not clone the repo directly.
+Make sure you have the latest Windows Bridge for iOS tools installed on your (real or virtual PC). Copy the correct bits from the github location [here](https://github.com/Microsoft/WinObjC/releases). 
 
-Now copy the SpriteSample Xcode project to the PC. You can then you can simply drag-and-drop the vsimporter.bin command right into the folder containing your Xcode project.
+*Remember: click on the Release link, do not clone the repo directly.*
 
+Copy the SpriteSample Xcode project to the PC. You can then you can simply drag-and-drop the vsimporter.bin command right into the folder containing your Xcode project.
 
 You can now double-click on the newly created SpriteSample-WinStore10.sln file, and the solution will open in Visual Studio. 
 
@@ -126,7 +127,6 @@ Add the following code to the AppDelegate.m file, immediately after the first #i
 
 
 Check the Visual Studio solution for a folder called Base under the SpriteSample folder containing some Storyboard files. As this app doesn’t use Storyboards, their presence can cause issues, so delete Base and the files it contains.
-
 
 Now you should be able to press F5, and build and run the app right on your local Windows device.
 
